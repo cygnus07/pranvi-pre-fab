@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 import ContactForm from '@/components/ContactForm'
 

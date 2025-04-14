@@ -11,6 +11,8 @@
   "dependencies": {
     "framer-motion": "^12.7.2",
     "next": "15.3.0",
+    "next-recaptcha-v3": "^1.5.2",
+    "nodemailer": "^6.10.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0"
