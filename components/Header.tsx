@@ -79,7 +79,7 @@ const Header = () => {
                     : 'text-gray-700 hover:text-yellow-600 hover:bg-gray-50'
                 }`}
               >
-                {item.name === 'Services' && <FaHardHat className="text-sm" />}
+                {item.name === 'Services'}
                 {item.name}
               </Link>
             ))}
