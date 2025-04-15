@@ -41,13 +41,13 @@ export default function Home() {
 
   // Rotating headline words
   const rotatingWords = [
-    "Infrastructure",
-    "Future",
-    "Landmarks",
-    "Skylines",
-    "Legacy",
-    "Foundations",
-  ];
+  "Infrastructure",
+  "Fabrication",
+  "Engineering",
+  "Construction"
+];
+
+  
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   useEffect(() => {
@@ -72,19 +72,20 @@ export default function Home() {
           />
         </div>
         <div className="container mx-auto px-6 z-10 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-blue-900">
-            Building Tomorrow's{" "}
-            <span className="relative inline-block h-[1em] w-full max-w-xs mx-auto">
-              <span
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-blue-900">
+          Building Tomorrow's{" "}
+          <span className="relative inline-block h-[1em] w-full max-w-xs mx-auto md:ml-4">
+            <span
               key={currentWordIndex}
-              className="absolute inset-0 flex items-center justify-center animate-fade text-indigo-600 font-semibold"
+              className="absolute inset-0 flex items-center justify-center animate-fade text-blue-800 font-semibold"
             >
-
-                {rotatingWords[currentWordIndex]}
-              </span>
+              {rotatingWords[currentWordIndex]}
             </span>
+          </span>
+        </h1>
 
-          </h2>
+
+
 
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-700">
             Premium steel structure solutions for industrial, commercial and residential projects

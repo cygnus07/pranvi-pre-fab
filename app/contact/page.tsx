@@ -13,7 +13,7 @@ const ContactPage = () => {
           src="/images/contact-hero.jpg" // Office or construction site image
           alt="Contact Us"
           fill
-          className="object-cover"
+          className="object-cover "
           priority
         />
         <div className="container mx-auto px-6 relative z-20">

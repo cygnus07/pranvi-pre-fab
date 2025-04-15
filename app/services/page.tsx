@@ -1,4 +1,3 @@
-// app/services/page.tsx
 import React from 'react';
 import Image from 'next/image';
 import { FaHardHat, FaWarehouse, FaHome, FaBuilding, FaIndustry } from 'react-icons/fa';
@@ -77,7 +76,7 @@ const ServicesPage = () => {
           src="/images/services/services-hero.jpg"
           alt="Our Services"
           fill
-          className="object-cover"
+          className="object-cover object-top"
           priority
         />
         <div className="container mx-auto px-6 relative z-20">
