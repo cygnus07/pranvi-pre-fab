@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { FaHardHat, FaUsers, FaAward, FaBuilding } from 'react-icons/fa'
 
-const Page = () => {
+const AboutPage = () => {
   return (
     <main className="bg-white">
       {/* Hero Section */}
@@ -106,4 +106,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default AboutPage
