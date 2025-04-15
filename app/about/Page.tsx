@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { FaHardHat, FaUsers, FaAward, FaBuilding } from 'react-icons/fa'
 
 const AboutPage = () => {
+    // Page to page
   return (
     <main className="bg-white">
       {/* Hero Section */}
