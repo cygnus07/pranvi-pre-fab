@@ -1,8 +1,6 @@
-// components/Footer.tsx
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaLinkedin, FaTwitter, FaInstagram, FaBuilding } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,14 +11,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logo-white.png"
-                alt="Pranvi Building Solutions"
-                width={180}
-                height={40}
-                className="h-10 w-auto"
-              />
+            <Link href="/" className="flex items-center gap-2 group">
+              <div className="bg-blue-800 text-white p-2 rounded-lg group-hover:bg-blue-700 transition-colors duration-300">
+                <FaBuilding className="text-xl" />
+              </div>
+              <span className="text-2xl font-bold text-white">
+                <span className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300">Pranvi</span>
+                <span className="font-light text-gray-300">Build</span>
+              </span>
             </Link>
             <p className="text-gray-400">
               Leading provider of premium steel structure solutions for industrial, commercial and residential projects.
