@@ -39,12 +39,10 @@
     @apply py-12 md:py-20;
   }
 }
-
-
 @keyframes fade {
   0%, 100% {
     opacity: 0;
-    transform: translateY(15%);
+    transform: translateY(10%);
   }
   50% {
     opacity: 1;
@@ -54,5 +52,5 @@
 
 .animate-fade {
   animation: fade 3s ease-in-out infinite;
+  white-space: nowrap;
 }
-

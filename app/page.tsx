@@ -74,14 +74,16 @@ export default function Home() {
         <div className="container mx-auto px-6 z-10 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 text-blue-900">
             Building Tomorrow's{" "}
-            <span className="inline-block relative w-[220px] h-[1em]">
+            <span className="relative inline-block h-[1em] w-full max-w-xs mx-auto">
               <span
                 key={currentWordIndex}
-                className="absolute left-0 top-0 animate-fade block text-blue-800"
+                className="absolute inset-0 flex items-center justify-center animate-fade text-indigo-600 font-semibold"
               >
+
                 {rotatingWords[currentWordIndex]}
               </span>
             </span>
+
           </h2>
 
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-700">
