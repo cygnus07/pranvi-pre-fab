@@ -15,6 +15,8 @@ import {
 } from "react-icons/fa";
 
 import { FaHome,  FaIndustry, FaSchool } from 'react-icons/fa';
+import { Project } from '@/components/types';
+
 
 
 export default function Home() {
@@ -105,7 +107,7 @@ export default function Home() {
   ];
 
   // Project showcase data
-  const projects = [
+  const projects: Project[] = [
    {
          id: '1',
          title: 'Industrial Warehouse Complex',
