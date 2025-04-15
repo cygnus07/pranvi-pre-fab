@@ -76,9 +76,9 @@ export default function Home() {
             Building Tomorrow's{" "}
             <span className="relative inline-block h-[1em] w-full max-w-xs mx-auto">
               <span
-                key={currentWordIndex}
-                className="absolute inset-0 flex items-center justify-center animate-fade text-indigo-600 font-semibold"
-              >
+              key={currentWordIndex}
+              className="absolute inset-0 flex items-center justify-center animate-fade text-indigo-600 font-semibold"
+            >
 
                 {rotatingWords[currentWordIndex]}
               </span>
