@@ -1,4 +1,6 @@
 // components/types/index.ts
+import { ReactElement } from "react";
+
 export type Project = {
     id: string;
     title: string;
@@ -6,5 +8,6 @@ export type Project = {
     imageUrl: string;
     location: string;
     year: number;
-    type: 'Industrial' | 'Commercial' | 'Residential' | 'Institutional';
+    type: string;
+    icon: ReactElement;
   };
