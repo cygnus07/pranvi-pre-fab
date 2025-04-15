@@ -8,6 +8,6 @@ export type Project = {
     imageUrl: string;
     location: string;
     year: number;
-    type: 'Industrial' | 'Commercial' | 'Residential' | 'Institutional';
+    type: string;
     icon: ReactElement;
   };
