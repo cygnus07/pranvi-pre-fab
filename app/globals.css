@@ -39,6 +39,7 @@
     @apply py-12 md:py-20;
   }
 }
+
 @keyframes fade {
   0%, 100% {
     opacity: 0;
@@ -54,9 +55,6 @@
   animation: fade 3s ease-in-out infinite;
   white-space: nowrap;
 }
-<<<<<<< HEAD
-=======
-
 
 /* Ensure animations work properly */
 .animate-on-scroll {
@@ -75,5 +73,3 @@ section {
   position: relative;
   z-index: 1;
 }
-
->>>>>>> claude
