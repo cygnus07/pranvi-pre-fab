@@ -19,10 +19,11 @@ import {
 import { IoConstruct } from 'react-icons/io5';
 
 const Footer = () => {
-  const [currentYear, setCurrentYear] = useState('');
-useEffect(() => {
-  setCurrentYear(new Date().getFullYear());
-}, []);
+      const [currentYear, setCurrentYear] = useState('');
+
+    useEffect(() => {
+      setCurrentYear(new Date().getFullYear().toString());
+    }, []); 
 
   return (
     <footer className="bg-gray-900 text-white pt-20 pb-12">
