@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import {useState, useEffect} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -19,7 +19,10 @@ import {
 import { IoConstruct } from 'react-icons/io5';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState('');
+useEffect(() => {
+  setCurrentYear(new Date().getFullYear());
+}, []);
 
   return (
     <footer className="bg-gray-900 text-white pt-20 pb-12">
