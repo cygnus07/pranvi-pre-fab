@@ -1,40 +1,61 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { FaBuilding, FaWrench, FaWarehouse } from 'react-icons/fa';
+import { useState, useEffect } from "react";
+import { FaBuilding, FaWrench, FaWarehouse } from "react-icons/fa";
 
 export default function Home() {
   const services = [
     {
       title: "Prefabricated Structures",
       description: "High-quality, cost-effective prefab solutions for all needs",
-      icon: <FaBuilding className="text-4xl text-blue-800" />
+      icon: <FaBuilding className="text-4xl text-blue-800" />,
     },
     {
       title: "Steel Framing",
       description: "Durable and flexible steel framing systems",
-      icon: <FaWrench className="text-4xl text-blue-800" />
+      icon: <FaWrench className="text-4xl text-blue-800" />,
     },
     {
       title: "Industrial Sheds",
       description: "Custom-designed industrial sheds and warehouses",
-      icon: <FaWarehouse className="text-4xl text-blue-800" />
-    }
+      icon: <FaWarehouse className="text-4xl text-blue-800" />,
+    },
   ];
 
   const features = [
     {
       title: "20+ Years Experience",
-      description: "Trusted expertise in steel construction"
+      description: "Trusted expertise in steel construction",
     },
     {
       title: "Quality Materials",
-      description: "We use only certified steel and components"
+      description: "We use only certified steel and components",
     },
     {
       title: "Timely Delivery",
-      description: "We respect deadlines and deliver on time"
-    }
+      description: "We respect deadlines and deliver on time",
+    },
   ];
+
+  // Rotating headline words
+  const rotatingWords = [
+    "Infrastructure",
+    "Future",
+    "Landmarks",
+    "Skylines",
+    "Legacy",
+    "Foundations",
+  ];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % rotatingWords.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -51,21 +72,30 @@ export default function Home() {
           />
         </div>
         <div className="container mx-auto px-6 z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-blue-900">
-            Building Tomorrow's Infrastructure
-          </h1>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-blue-900">
+            Building Tomorrow's{" "}
+            <span className="inline-block relative w-[220px] h-[1em]">
+              <span
+                key={currentWordIndex}
+                className="absolute left-0 top-0 animate-fade block text-blue-800"
+              >
+                {rotatingWords[currentWordIndex]}
+              </span>
+            </span>
+          </h2>
+
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-700">
             Premium steel structure solutions for industrial, commercial and residential projects
           </p>
           <div className="flex gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="bg-blue-800 hover:bg-blue-900 text-white px-6 py-3 rounded-md font-medium transition-colors"
             >
               Get a Quote
             </Link>
-            <Link 
-              href="/services" 
+            <Link
+              href="/services"
               className="bg-white text-blue-900 border border-blue-900 px-6 py-3 rounded-md hover:bg-blue-50 transition-colors"
             >
               Our Services
@@ -80,7 +110,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center">Our Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
               >
@@ -150,8 +180,8 @@ export default function Home() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Contact us today for a free consultation and quote
           </p>
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className="inline-block bg-white text-blue-900 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors"
           >
             Contact Us
