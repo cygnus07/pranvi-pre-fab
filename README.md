@@ -9,7 +9,7 @@ A modern, responsive Next.js website for a steel construction and prefabricated 
 
 ## 🌟 Live Demo
 
-[View Live Site]([https://pranvi-construction.vercel.app](https://pranvi-pre-fab-delta.vercel.app/)) 
+[View Live Site](https://pranvi-pre-fab-delta.vercel.app/) 
 
 
 
